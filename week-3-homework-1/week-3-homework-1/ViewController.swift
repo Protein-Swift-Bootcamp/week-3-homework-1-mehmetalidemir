@@ -9,11 +9,21 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var textLabel: UILabel!
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
 
+    @IBAction func didTapButton() {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "second") as! SecondViewController
+        vc.modalPresentationStyle = .fullScreen
+        vc.completionHandler = { text in
+            self.textLabel.text = text
+        }
+        present(vc, animated: true)
+    }
 
 }
 
