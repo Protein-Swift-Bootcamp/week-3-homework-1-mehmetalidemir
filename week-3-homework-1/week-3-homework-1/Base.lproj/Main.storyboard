@@ -35,12 +35,28 @@
                                     <action selector="didTapButton" destination="BYZ-38-t0r" eventType="touchUpInside" id="DDm-NP-ChM"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show data from second screen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Hrk-Sb-aBq">
+                                <rect key="frame" x="75" y="222" width="241" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Show data from second screen." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gtE-hz-aRN">
+                                <rect key="frame" x="75" y="251" width="241" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemGray6Color"/>
                     </view>
                     <connections>
-                        <outlet property="textLabel" destination="Wkp-Wa-Gez" id="dEo-o5-QCM"/>
+                        <outlet property="ageTextLabel" destination="gtE-hz-aRN" id="E8u-x1-7eA"/>
+                        <outlet property="cityTextLabel" destination="Hrk-Sb-aBq" id="ef1-1T-H7W"/>
+                        <outlet property="nameTextLabel" destination="Wkp-Wa-Gez" id="dEo-o5-QCM"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -55,7 +71,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Type Data" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Cd-S7-Bzq">
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Name" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="1Cd-S7-Bzq">
                                 <rect key="frame" x="91" y="190" width="211" height="34"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemGray6Color"/>
@@ -63,7 +79,7 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zwm-Ix-YXJ">
-                                <rect key="frame" x="165" y="265" width="64" height="35"/>
+                                <rect key="frame" x="164" y="357" width="64" height="35"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Send" cornerStyle="large">
@@ -74,12 +90,28 @@
                                     <action selector="didTapSend:" destination="nPl-Vn-fbW" eventType="touchUpInside" id="kOh-zv-vor"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your City" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Qg8-i8-5ug">
+                                <rect key="frame" x="91" y="232" width="211" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Your Age" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="t5L-iQ-LSM">
+                                <rect key="frame" x="91" y="274" width="211" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemGray6Color"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="HIr-Ii-Yus"/>
                         <color key="backgroundColor" systemColor="systemIndigoColor"/>
                     </view>
                     <connections>
-                        <outlet property="textField" destination="1Cd-S7-Bzq" id="bvj-uH-fI7"/>
+                        <outlet property="ageTextField" destination="t5L-iQ-LSM" id="QaO-rz-r0Q"/>
+                        <outlet property="cityTextField" destination="Qg8-i8-5ug" id="J1G-eV-nVL"/>
+                        <outlet property="nameTextField" destination="1Cd-S7-Bzq" id="bvj-uH-fI7"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="TMJ-EH-16b" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

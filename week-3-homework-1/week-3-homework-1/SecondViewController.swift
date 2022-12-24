@@ -9,9 +9,13 @@ import UIKit
 
 class SecondViewController: UIViewController {
 
-    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var nameTextField: UITextField!
+    @IBOutlet weak var cityTextField: UITextField!
+    @IBOutlet weak var ageTextField: UITextField!
 
-    public var completionHandler: ((String?) -> Void)?
+
+    // second viewcontroller kapatıldığında completionHandler'ı çağır
+    public var completionHandler: ((String?, String?, String?) -> Void)?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,7 +23,11 @@ class SecondViewController: UIViewController {
 
 
     @IBAction func didTapSend(_ sender: Any) {
-        completionHandler?(textField.text)
+        // textField'deki textler ile completionHandler'ı çağır
+        completionHandler?(nameTextField.text, cityTextField.text, ageTextField.text)
+  
+
+        // second viewcontroller'i kapat
         dismiss(animated: true)
     }
 }
