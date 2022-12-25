@@ -27,7 +27,7 @@
                                 <rect key="frame" x="97" y="427" width="197" height="77"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="tinted" title="Go to second screen" cornerStyle="large">
+                                <buttonConfiguration key="configuration" style="tinted" title="Go to Form" cornerStyle="large">
                                     <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                     <color key="baseBackgroundColor" systemColor="systemIndigoColor"/>
                                 </buttonConfiguration>
